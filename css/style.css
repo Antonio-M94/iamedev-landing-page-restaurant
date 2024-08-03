@@ -132,7 +132,7 @@ section {
 }
 
 .btn:hover {
-  box-shadow: 0px 1rem 1.4rem rgba(125, 216, 125, 0.44);
+  box-shadow: 0px 1rem 1.4rem #7dd87d70;
 }
 
 .home-img img {
@@ -329,4 +329,68 @@ header.sticky {
 }
 .row i:hover {
   transform: scale(1.04) translateY(-0.3rem);
+}
+
+.container {
+  padding: 2rem 4rem;
+  box-shadow: 0px 0.3rem 2.5rem rgb(19 8 73 / 13%);
+  border-radius: 2rem;
+}
+
+.newsletter-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.news-text h2 {
+  color: var(--second-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.news-text h3 {
+  margin: 1.4rem 0 1.4rem;
+  font-size: var(--h2-font);
+  line-height: 1.1;
+}
+
+.news-text p {
+  font-size: var(--p-font);
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.letter form {
+  position: relative;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.letter form input:first-child {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 1.1rem 1.1rem 1rem;
+  border: 0.1rem solid var(--main-color);
+  outline: none;
+  border-radius: 2rem;
+  font-size: var(--p-font);
+}
+
+.letter form input:last-child {
+  position: absolute;
+  display: inline-block;
+  padding: 1.1rem 1.2rem;
+  border-radius: 2rem;
+  background-color: var(--main-color);
+  color: #f5f5f5;
+  top: 0rem;
+  right: 0rem;
+  border: none;
+  cursor: pointer;
+  font-size: var(--p-font);
 }
