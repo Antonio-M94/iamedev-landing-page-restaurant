@@ -1,0 +1,10 @@
+.footer {
+  text-align: center;
+}
+.footer__text {
+  color: rgb(151, 228, 127);
+  background: var(--text-color);
+  font-size: 1rem;
+  letter-spacing: 2;
+  padding: 2.4rem;
+}

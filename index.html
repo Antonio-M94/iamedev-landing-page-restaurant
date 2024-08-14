@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gold Fish</title>
     <link rel="shortcut icon" href="img/icon.png" type="image/png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/newsletter.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,360 +27,132 @@
 
 <body>
     <!-- header -->
-    <header>
-        <a href="#" class="logo"><img src="img/logo.png" alt="Logo"></a>
-        <div>
-            <span id="menu-icon" class="material-symbols-outlined">menu</span>
+    <header class="header">
+        <a href="#" class="header__logo"><img src="img/logo.png" alt="Logo"></a>
+        <button id="menu-icon" class="header__menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="header__navbar">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="#home" class="navbar__link">Home</a></li>
+                <li class="navbar__item"><a href="#about" class="navbar__link">About</a></li>
+                <li class="navbar__item"><a href="#menu" class="navbar__link">Menu</a></li>
+                <li class="navbar__item"><a href="#team" class="navbar__link">Team</a></li>
+                <li class="navbar__item"><a href="#blog" class="navbar__link">Blog</a></li>
+                <li class="navbar__item"><a href="#contact" class="navbar__link">
+                        <i class="fa-solid fa-cart-shopping cart"></i>
+                    </a></li>
+            </ul>
+        </nav>
+        <div class="header__cta">
+            <a href="#" class="cta__button">Order Now</a>
         </div>
-        <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#"><span class="material-symbols-outlined cart">add_shopping_cart</span></a></li>
-        </ul>
-        <div class="top-btn"><a href="">Order Now</a></div>
     </header>
 
-    <!-- home -->
-    <section class="home" id="home">
-        <div class="home-text">
-            <h2>Welcome</h2>
-            <h3>Experience Fresh and Natural Flavors</h3>
-            <p>We offer an exceptional dining experience with fresh, high-quality ingredients. Discover the true taste
-                of authentic cuisine.</p>
-            <a href="#about" class="btn">About Us</a>
-        </div>
-        <div class="home-img">
-            <img src="img/home.png" alt="Home image">
-        </div>
-    </section>
-    <!-- about -->
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="img/about.svg" alt="About image">
-        </div>
-        <div class="about-text">
-            <h2>About Us</h2>
-            <h3>GoldFish Restaurant</h3>
-            <p>GoldFish offers an exceptional dining experience with fresh, high-quality ingredients. Discover authentic
-                cuisine.</p>
-            <a href="#" class="btn">About Us</a>
-        </div>
-    </section>
-    <!-- food menu -->
-    <section class="menu" id="menu">
-        <div class="center-text">
-            <h2>Food Menu</h2>
-            <h3>Delicious Food</h3>
-        </div>
-        <div class="menu-content">
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food1.jpeg" alt="Potato Croquettes">
+    <main>
+        <!-- home -->
+        <section class="home" id="home">
+            <div class="home__text">
+                <h2 class="home__title">Welcome</h2>
+                <h3 class="home__subtitle">Experience Fresh and Natural Flavors</h3>
+                <p class="home__description">We offer an exceptional dining experience with fresh, high-quality
+                    ingredients. Discover the true taste of authentic cuisine.</p>
+                <a href="#about" class="home__btn">About Us</a>
+            </div>
+            <div class="home__img">
+                <img src="img/home.png" alt="Home image" class="home__image">
+            </div>
+        </section>
+        <!-- about -->
+        <section class="about" id="about">
+            <div class="about__image">
+                <img src="img/about.svg" alt="About image" class="about__img">
+            </div>
+            <div class="about__text">
+                <h2 class="about__title">About Us</h2>
+                <h3 class="about__subtitle">GoldFish Restaurant</h3>
+                <p class="about__description">GoldFish offers an exceptional dining experience with fresh, high-quality
+                    ingredients. Discover authentic cuisine.</p>
+                <a href="#" class="about__btn">About Us</a>
+            </div>
+        </section>
+        <!-- food menu -->
+        <section class="menu" id="menu">
+            <div class="menu__text">
+                <h2 class="menu__title">Food Menu</h2>
+                <h3 class="menu__subtitle">Delicious Food</h3>
+            </div>
+            <div class="menu__content" id="menu-content">
+                <!-- Menu items will be dynamically inserted here -->
+            </div>
+            <div class="menu__btn_content">
+                <a href="#" class="menu__btn">About Us</a>
+            </div>
+        </section>
+        <!-- team -->
+        <section class="team" id="team">
+            <div class="team__text">
+                <h2 class="team__title">Team</h2>
+                <h3 class="team__subtitle">Our Experience Chefs</h3>
+            </div>
+            <div class="team__content" id="team-content">
+                <!-- Team members will be dynamically inserted here -->
+            </div>
+        </section>
+        <!-- newsletter -->
+        <section class="newsletter">
+            <div class="newsletter__container">
+                <div class="newsletter__content">
+                    <div class="newsletter__image">
+                        <img src="img/discount.svg" alt="Discount" class="newsletter__img">
                     </div>
-                    <div class="box-text">
-                        <h4>Potato Croquettes</h4>
-                        <p>Crispy on the outside, creamy cheese inside. Perfect as a side dish or snack.</p>
-                        <h5>$34</h5>
+                    <div class="newsletter__text">
+                        <h2 class="newsletter__title">Subscribe To Our</h2>
+                        <h3 class="newsletter__subtitle">Newsletter</h3>
+                        <p class="newsletter__description">Subscribe to our newsletter and receive 20% <br> discount on
+                            your order.</p>
+                    </div>
+                    <div class="newsletter__form-container">
+                        <form class="newsletter__form">
+                            <input type="email" name="email" class="newsletter__input" placeholder="Your Email"
+                                required>
+                            <input type="submit" class="newsletter__submit" value="Subscribe">
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food2.jpeg" alt="Grilled Chicken Wings">
-                    </div>
-                    <div class="box-text">
-                        <h4>Grilled Chicken Wings</h4>
-                        <p>Tender wings coated in savory sauce. A satisfying appetizer or main course.</p>
-                        <h5>$22</h5>
-                    </div>
-                </div>
+        </section>
+        <!-- blog -->
+        <section class="blog" id="blog">
+            <div class="blog__text">
+                <h2 class="blog__title">Blog</h2>
+                <h3 class="blog__subtitle">New Trends & Updates</h3>
             </div>
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food3.jpeg" alt="Baked Wedge Potatoes">
-                    </div>
-                    <div class="box-text">
-                        <h4>Baked Wedge Potatoes</h4>
-                        <p>Crispy and seasoned, served with tangy ranchera sauce. A tasty side dish.</p>
-                        <h5>$14</h5>
-                    </div>
-                </div>
+            <div class="blog__content" id="blog-content">
+                <!-- Blog posts will be dynamically inserted here -->
             </div>
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food4.jpeg" alt="Broccoli Soup">
-                    </div>
-                    <div class="box-text">
-                        <h4>Broccoli Soup</h4>
-                        <p>A creamy soup with fresh broccoli and a hint of garlic. Perfect as a starter or light meal.
-                        </p>
-                        <h5>$16</h5>
-                    </div>
-                </div>
+        </section>
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <div class="contact__container" id="contact-content">
+                <!-- Dynamic content will be injected here -->
             </div>
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food5.jpeg" alt="Kebab Skewer">
-                    </div>
-                    <div class="box-text">
-                        <h4>Kebab Skewer</h4>
-                        <p>Juicy skewers grilled to perfection, served with fresh vegetables and tangy sauce.</p>
-                        <h5>$20</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food6.jpeg" alt="Thai Ramen">
-                    </div>
-                    <div class="box-text">
-                        <h4>Thai Ramen</h4>
-                        <p>Spicy broth with tender noodles, fresh vegetables, and meat or tofu. Balanced flavors.</p>
-                        <h5>$24</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food7.jpeg" alt="Vietnamese Fried Chicken">
-                    </div>
-                    <div class="box-text">
-                        <h4>Vietnamese Fried Chicken</h4>
-                        <p>Crispy chicken marinated in spices, served with pickled vegetables and a tangy sauce.</p>
-                        <h5>$22</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food8.jpeg" alt="Fruit Salad">
-                    </div>
-                    <div class="box-text">
-                        <h4>Fruit Salad</h4>
-                        <p>A refreshing mix of seasonal fruits with a light citrus dressing. Perfect as a dessert or
-                            side dish.</p>
-                        <h5>$12</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food9.jpeg" alt="Pavlova Cake">
-                    </div>
-                    <div class="box-text">
-                        <h4>Pavlova Cake</h4>
-                        <p>A meringue base topped with whipped cream and fresh fruits. Light, sweet, and tangy.</p>
-                        <h5>$18</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="box-content">
-                    <div class="box-img">
-                        <img src="img/food10.jpeg" alt="Sundae">
-                    </div>
-                    <div class="box-text">
-                        <h4>Sundae</h4>
-                        <p>Classic vanilla ice cream with hot fudge, whipped cream, and a cherry. Optional toppings
-                            available.</p>
-                        <h5>$14</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div class="box-btn">
-            <a href="#" class="btn">About Us</a>
-        </div>
-    </section>
-    <!-- team -->
+    </main>
 
-    <section class="team" id="team">
-        <div class="center-text">
-            <h2>Team</h2>
-            <h3>Our Experience Chefs</h3>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">&copy; Antonio Mondragón. All Rights Reserved</p>
         </div>
-        <div class="team-content">
-            <div class="row">
-                <div class="team-img">
-                    <img src="img/team.jpeg" alt="Team">
-                </div>
-                <h3>Chef Aria Davenport</h3>
-                <p>Executive Chef</p>
-                <div class="team-icon">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="team-img">
-                    <img src="img/team2.jpeg" alt="Team">
-                </div>
-                <h3>Chef Mei Ling</h3>
-                <p>Executive Chef</p>
-                <div class="team-icon">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="team-img">
-                    <img src="img/team3.jpeg" alt="Team">
-                </div>
-                <h3>Chef Emily White</h3>
-                <p>Executive Chef</p>
-                <div class="team-icon">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="team-img">
-                    <img src="img/team4.jpeg" alt="Team">
-                </div>
-                <h3>Chef Carlos Rodríguez</h3>
-                <p>Executive Chef</p>
-                <div class="team-icon">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--  newletter-->
-    <section>
-        <div class="container">
-            <div class="newsletter-content">
-                <div class="news-img">
-                    <img src="img/discount.svg" alt="Discount">
-                </div>
-                <div class="news-text">
-                    <h2>Subscribe To Our</h2>
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter and recibe 20% <br> discount from your order.</p>
-                </div>
-                <div class="letter">
-                    <form>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="submit" value="Subscribe" required>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- blog -->
-    <section class="blog" id="blog">
-        <div class="center-text">
-            <h2>Blog</h2>
-            <h3>New Trends & Updates</h3>
-        </div>
-        <div class="blog-content">
-            <div class="main">
-                <img src="img/blog1.jpeg" alt="Blog-1">
-                <div class="blog-text">
-                    <h2>July 25, 2023</h2>
-                    <h3>New Cooking Trends</h3>
-                    <p>Explore the newest trends in the culinary world. Discover how modern techniques and tools are
-                        revolutionizing meal preparation.</p>
-
-                    <div class="blog-btn">
-                        <a href="#">Learn More</a>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="main">
-                <img src="img/blog2.jpeg" alt="Blog-2">
-                <div class="blog-text">
-                    <h2>August 10, 2023</h2>
-                    <h3>Trends in Food & Nutrition</h3>
-                    <p>Explore new trends in food and nutrition. Learn about popular diets and healthy eating practices
-                        in today’s evolving culinary world.</p>
-                    <div class="blog-btn">
-                        <a href="#">Learn More</a>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="main">
-                <img src="img/blog3.jpeg" alt="Blog-3">
-                <div class="blog-text">
-                    <h2>September 5, 2023</h2>
-                    <h3>Innovations in Cooking</h3>
-                    <p>Check out the latest innovations in cooking. New techniques and tools are changing how we prepare
-                        meals in our kitchens.</p>
-                    <div class="blog-btn">
-                        <a href="#">Learn More</a>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- contact -->
-    <section class="contact" id="contact">
-        <div class="contact-box">
-            <h2>GoldFish</h2>
-            <h3>Connect With Us</h3>
-            <div class="social">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="contact-box">
-            <h2>Menu Links</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="contact-box">
-            <h2>Our foods</h2>
-            <ul>
-                <li><a href="#">Foie Gras</a></li>
-                <li><a href="#">Beef Wellington</a></li>
-                <li><a href="#">Lobster Thermidor</a></li>
-                <li><a href="#">Truffle Risotto</a></li>
-                <li><a href="#">Peking Duck</a></li>
-            </ul>
-        </div>
-        <div class="contact-box address">
-            <h2>Contact</h2>
-            <i class="fa-solid fa-location-dot"><span>1234 La Ivan, Comayagua</span></i>
-            <i class="fa-solid fa-envelope"><span>goldfish@testmail.com</span></i>
-            <i class="fa-solid fa-phone"><span>(504) 99 99 9999</span></i>
-        </div>
-    </section>
-    <footer class="end-text">
-        <p>&copy; Antonio Mondragón. All Rights Reserved</p>
     </footer>
 
-    <script src="js/script.js"></script>
+
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/foodSection.js"></script>
+    <script type="module" src="js/teamSection.js"></script>
+    <script type="module" src="js/blogSection.js"></script>
+    <script type="module" src="js/contactSection.js"></script>
     <script src="https://kit.fontawesome.com/16fb7e63d7.js " crossorigin="anonymous "></script>
 </body>
 
